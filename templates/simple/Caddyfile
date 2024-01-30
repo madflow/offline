@@ -1,0 +1,12 @@
+:80 {
+  encode gzip
+  root * /app
+  try_files {path} /index.html
+  file_server {
+    status 503
+  }
+  log {
+    output stdout
+  }
+}
+

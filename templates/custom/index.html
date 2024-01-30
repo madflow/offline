@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Maintenance</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+        color: #555;
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ getenv "MAIN_TITLE" "Maintenance"}}</h1>
+    <p>
+      We apologize for the inconvenience, but our website is currently
+      undergoing scheduled maintenance.
+    </p>
+
+    {{ if and (getenv "MAIN_START") (getenv "MAIN_END") }}
+    <h3>Maintenance Details</h3>
+    <ul>
+      <li>Start Date and Time: {{ getenv "MAIN_START" "" }}</li>
+      <li>End Date and Time: {{ getenv "MAIN_END" "" }}</li>
+    </ul>
+    {{ end }}
+  </body>
+</html>
