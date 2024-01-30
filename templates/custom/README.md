@@ -3,11 +3,11 @@
 ## Example usage
 
 ```
-docker run -p "80:80" ghcr.io/madflow/maintenance-custom:main
+docker run -p "80:80" ghcr.io/madflow/offline-custom:main
 ```
 
 ```
-docker run -e "MAIN_TITLE=Website Offline" -e "MAIN_START=July 1st, 3033" -e "MAIN_END=December 31, 4000" -p "80:80" ghcr.io/madflow/maintenance-custom:main
+docker run -e "MAIN_TITLE=Website Offline" -e "MAIN_START=July 1st, 3033" -e "MAIN_END=December 31, 4000" -p "80:80" ghcr.io/madflow/offline-custom:main
 ```
 
 ## Environment variables
